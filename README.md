@@ -83,4 +83,6 @@ Framework web: bootstrap - versão 4.0
 ```
  ## Visualização do Projeto 
 
- 
+ Vídeo 01 - https://www.youtube.com/watch?v=xaT-6qg8SyM&ab_channel=Oentusiastadatecnologia 
+
+ Video 02 - https://www.youtube.com/watch?v=lUUzdvGmZoM&ab_channel=Oentusiastadatecnologia

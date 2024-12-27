@@ -15,22 +15,22 @@ class Oportunidade extends Model
      * @param int $id
      * @return Oportunidade|null
      */
-    public function getById(int $id)
+    public static function getById(int $id)
     {
         return self::find($id);
     }
 
-    public function listarOportunidade()
+    public static function listarOportunidade()
     {
         return self::all();
     }
 
-    public function cadastrarOportunidade(array $dados)
+    public static function cadastrarOportunidade(array $dados)
     {
         return self::create($dados);
     }
 
-    public function editarOportunidade(int $id, array $dados)
+    public static function editarOportunidade(int $id, array $dados)
     {
         $atividade = self::findOrFail($id);
 
@@ -39,7 +39,7 @@ class Oportunidade extends Model
         return $atividade;
     }
 
-    public function excluirOportunidade(int $id)
+    public static function excluirOportunidade(int $id)
     {
         $atividade = self::findOrFail($id);
 

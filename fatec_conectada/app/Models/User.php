@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use function Laravel\Prompts\select;
 
 class User extends Authenticatable
 {
@@ -45,5 +46,20 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function atividades()
+    {
+        return $this->hasMany(Atividade::class);
+    }
+
+    public function obterTodosUsuarios()
+    {
+        return self::all();
+    }
+
+    public function deletarUsuario(string $tipo)
+    {
+        return self::where('tipo', $tipo)->delete();
     }
 }
